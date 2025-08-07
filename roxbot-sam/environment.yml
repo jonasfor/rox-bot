@@ -1,0 +1,21 @@
+name: samclip
+channels:
+  - defaults
+  - conda-forge
+  - pytorch
+  - nvidia  # canal necessário para CUDA se você quiser instalar depois
+dependencies:
+  - python=3.10
+  - pip
+  - numpy
+  - mss
+  - pyautogui
+  - pillow
+  - opencv
+  - pytorch
+  - torchvision
+  - torchaudio
+  - pip:
+      - git+https://github.com/facebookresearch/segment-anything.git
+      - git+https://github.com/openai/CLIP.git
+      - paddleocr
