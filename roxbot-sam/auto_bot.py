@@ -31,8 +31,17 @@ ANALYSIS_INTERVAL = 2  # seconds
 
 # Regions and templates
 REGION_PERCENTAGES = {
+    "cla_order": (0.68, 0.42, 0.78, 0.64),
+    "cla_go": (0.45, 0.77, 0.55, 0.87),
+    "cla_go2": (0.3, 0.4, 0.4, 0.5),
+    "cla_event": (0.23, 0.12, 0.35, 0.26),
+    "cla_send": (0.85, 0.76, 0.98, 0.88),
+    "cla_fast_select": (0.6, 0.8, 0.67, 0.9),
+    "cla_refresh": (0.15, 0.75, 0.25, 0.9),
+    "cla_buy_send": (0.4, 0.8, 0.6, 0.9),
     "mission_panel": (0.0, 0.275, 0.15, 0.6),
     "jump_button": (0.89, 0.03, 0.98, 0.13),
+    "auto_play": (0.2, 0.7, 0.3, 0.9),
     "init_mission": (0.8, 0.02, 0.85, 0.15),
     "mission_board": (0.45, 0.49, 0.55, 0.68),
     "mission_go": (0.5, 0.75, 0.6, 0.85),
@@ -54,7 +63,9 @@ REGION_PERCENTAGES = {
 }
 
 REGION_TEMPLATES = {
+    # "cla_buy_send": ["cla_buy_send"],
     "mission_panel": ["secondary", "daily", "legendary"],
+    "auto_play": ["auto_play"],
     "jump_button": ["jump"],
     "action_button": ["action"],
     "action1_button": ["action1"],
@@ -178,6 +189,7 @@ def start_loop():
         if now - last_run >= ANALYSIS_INTERVAL:
             print(f"\n[⏱️] Running analysis at {time.strftime('%H:%M:%S')}")
             if DEBUG_MODE:
+                print(regions)
                 draw_region_overlay(regions, frame_idx)
             for name, bbox in regions.items():
                 match_and_click(name, bbox, frame_idx)
