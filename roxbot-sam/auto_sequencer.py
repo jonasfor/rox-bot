@@ -24,6 +24,17 @@ SEQUENCE_REGISTRY = {
     "missoes": {
         "assets_dir": "assets/missao",
         "steps": [
+            {"region": "init_mission",  "label": "imagem0", "optional": False, "attempts": None},
+            {"region": "mission_board", "label": "imagem1", "optional": False,  "attempts": None},  # attempts ignorado
+            {"region": "mission_go",    "label": "imagem2", "optional": False, "attempts": None},
+            {"region": "mission_agree", "label": "imagem3", "optional": False, "attempts": None},
+        ],
+    },
+
+    # Exemplo extra (só como modelo; ajuste regiões/nomes/templates/pastas se quiser usar)
+    "cla_order": {
+        "assets_dir": "assets/missao",
+        "steps": [
             {"region": "auto_play",     "label": "imagem0", "optional": True, "attempts": 5},
             {"region": "init_mission",  "label": "imagem1", "optional": False, "attempts": None},
             {"region": "cla_order",     "label": "imagem2", "optional": False, "attempts": None},
@@ -34,21 +45,10 @@ SEQUENCE_REGISTRY = {
             {"region": "cla_fast_select",  "label": "imagem7", "optional": False, "attempts": None},
             {"region": "cla_buy_send",  "label": "imagem8", "optional": False, "attempts": None},
             {"region": "cla_refresh",  "label": "imagem9", "optional": False, "attempts": None},
-            {"region": "init_mission",  "label": "imagem10", "optional": False, "attempts": None},
-            {"region": "mission_board", "label": "imagem11", "optional": False,  "attempts": None},  # attempts ignorado
-            {"region": "mission_go",    "label": "imagem12", "optional": False, "attempts": None},
-            {"region": "mission_agree", "label": "imagem13", "optional": False, "attempts": None},
-        ],
-    },
-
-    # Exemplo extra (só como modelo; ajuste regiões/nomes/templates/pastas se quiser usar)
-    "mineracao": {
-        "assets_dir": "assets/mineracao",
-        "steps": [
-            {"region": "miner_button",      "label": "abrir_minerador", "optional": False, "attempts": None},
-            {"region": "take_picture_button","label": "tirar_foto",     "optional": True,  "attempts": 2, "templates": ["take_picture", "take_picture2", "take_picture3"]},
-            {"region": "take_shot_button",  "label": "confirmar_foto",  "optional": False, "attempts": 5},
-            {"region": "close_picture_button","label": "fechar_foto",   "optional": True,  "attempts": 1},
+            {"region": "cla_confirm",  "label": "imagem10", "optional": False, "attempts": None},
+            {"region": "cla_send",      "label": "imagem11", "optional": False, "attempts": None},
+            {"region": "cla_fast_select",  "label": "imagem12", "optional": False, "attempts": None},
+            {"region": "cla_buy_send",  "label": "imagem13", "optional": False, "attempts": None},
         ],
     },
 }

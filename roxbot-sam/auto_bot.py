@@ -39,6 +39,7 @@ REGION_PERCENTAGES = {
     "cla_fast_select": (0.6, 0.8, 0.67, 0.9),
     "cla_refresh": (0.15, 0.75, 0.25, 0.9),
     "cla_buy_send": (0.4, 0.8, 0.6, 0.9),
+    "cla_confirm": (0.5, 0.57, 0.65, 0.67),
     "mission_panel": (0.0, 0.275, 0.15, 0.6),
     "jump_button": (0.89, 0.03, 0.98, 0.13),
     "auto_play": (0.2, 0.7, 0.3, 0.9),
@@ -63,7 +64,7 @@ REGION_PERCENTAGES = {
 }
 
 REGION_TEMPLATES = {
-    # "cla_buy_send": ["cla_buy_send"],
+    # "cla_confirm": ["cla_confirm"],
     "mission_panel": ["secondary", "daily", "legendary"],
     "auto_play": ["auto_play"],
     "jump_button": ["jump"],
