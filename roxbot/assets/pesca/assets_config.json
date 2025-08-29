@@ -1,0 +1,43 @@
+{
+  "monitor_index": 1,
+  "pad_frac": 0.1,
+  "thresholds": {
+    "lancar": 0.86,
+    "carretel_ok": 0.88,
+    "carretel_neg": 0.86
+  },
+  "rois": {
+    "lancar.png": [
+      0.8206442166910688,
+      0.62109375,
+      0.08784773060029283,
+      0.1640625
+    ],
+    "carretel_verde.png": [
+      0.801610541727672,
+      0.5833333333333334,
+      0.1281112737920937,
+      0.22005208333333334
+    ],
+    "carretel.png": [
+      0.7833089311859444,
+      0.56640625,
+      0.16325036603221083,
+      0.2643229166666667
+    ]
+  },
+  "decision": {
+    "ok_neg_margin": 0.02,
+    "green_ratio_min": 0.14,
+    "neg_max_for_click": 0.9
+  },
+  "timing": {
+    "click_cooldown_ms": 180,
+    "post_launch_delay": 0.35,
+    "ok_frames_required": 2
+  },
+  "loop": {
+    "enabled": true,
+    "delay_after_click": 0.9
+  }
+}
